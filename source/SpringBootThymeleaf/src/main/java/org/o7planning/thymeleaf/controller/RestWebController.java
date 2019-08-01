@@ -151,6 +151,7 @@ public class RestWebController {
 			message.setSender((fluxfunction.findById(currentAdminiD , tempgetuser)).block());// set Sender
 			message.setReceiver((fluxfunction.findById(currentUseriD, tempgetuser)).block());// ser Reciver
 			message.setDate(strDate);
+			message.setOwner(currentUseriD);
 			int k = message.getCount();
 			message.setCount(k + 1);
 			messages.add(message);
@@ -179,6 +180,7 @@ public class RestWebController {
 	     
 	     // Insert Data 1
 	     BasicDBObject doc1 = new BasicDBObject();
+	     doc1.append("primary_key", message.getOwner());
 	     doc1.append("textMessage", message.getTextMessage());
 	     doc1.append("date", strDate);
 	     doc1.append("receiver_id", currentUseriD);
@@ -251,6 +253,7 @@ public class RestWebController {
 	     
 	     // Insert Data 1
 	     BasicDBObject doc1 = new BasicDBObject();
+	     doc1.append("primary_key", message.getOwner());
 	     doc1.append("textMessage", message.getTextMessage());
 	     doc1.append("date", strDate);
 	     doc1.append("receiver_id", currentAdminiD);
