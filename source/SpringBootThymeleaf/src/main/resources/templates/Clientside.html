@@ -1,0 +1,133 @@
+<!DOCTYPE html >
+<html xmlns:th="http://www.thymeleaf.org">
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<script
+	src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script
+	src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" type="text/css" th:href="@{/css/Clientcss.css}" />
+<link rel="stylesheet" type="text/javascript" th:href="@{/js/Client.js}" />
+
+<link
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+	rel="stylesheet" />
+<link rel="stylesheet"
+	href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+	integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+	crossorigin="anonymous">
+
+
+
+<script src="/js/postaddclient.js"></script>
+<script src="/js/Client.js"></script>
+<script src="/js/postchatclient.js"></script>
+
+
+
+
+<div class="container">
+
+	<form class="form-inline" style="margin: 20px 20px 20px 20px"
+		id="customerForm">
+		<div class="form-group">
+			<label for="firstname" style="margin-right: 5px">Name:</label> <input
+				type="text" class="form-control" id="username"
+				placeholder="Enter FirstName" />
+			<p id="introduce" value="">Your user id is :</p>
+			<p id="iduser" value=""></p>
+
+
+
+
+		</div>
+
+		<button type="submit" class="btn btn-default" id="buttonsubmit"
+			style="margin-left: 20px; margin-right: 5px">Submit</button>
+	</form>
+
+
+	
+
+	<hr>
+	<div class="row">
+		<div class="chatbox chatbox22 chatbox--tray">
+			<div class="chatbox__title">
+				<h5>
+
+
+
+					<a href="javascript:void()">Leave a message</a>
+				</h5>
+				<!--<button class="chatbox__title__tray">
+            <span></span>
+        </button>-->
+				<button class="chatbox__title__close">
+					<span> <svg viewBox="0 0 12 12" width="12px" height="12px">
+                    <line stroke="#FFFFFF" x1="11.75" y1="0.25"
+								x2="0.25" y2="11.75"></line>
+                    <line stroke="#FFFFFF" x1="11.75" y1="11.75"
+								x2="0.25" y2="0.25"></line>
+                </svg>
+					</span>
+				</button>
+			</div>
+			
+			
+			
+			
+			<div class="chatbox__body" id="loop">
+			
+			  <form  id="msg_chat_form"  >
+			
+			</form>
+			
+			
+			</div>
+			
+			
+			<div class="panel-footer">
+				<div class="input-group">
+				
+			
+				<form  id="sendchatForm" >
+					<input id="btn-input" type="text"
+						class="form-control input-sm chat_set_height"
+						placeholder="Type your message here..." tabindex="0" dir="ltr"
+						spellcheck="false" autocomplete="off" autocorrect="off"
+						autocapitalize="off" contenteditable="true" /> <span
+						class="input-group-btn">
+						
+						
+						
+						
+					</span>
+					
+					
+					
+						<button  type="submit"  >Send</button>
+					
+					</form>
+					
+					
+					
+				</div>
+			</div>
+		</div>
+
+	</div>
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+	crossorigin="anonymous"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</html>
